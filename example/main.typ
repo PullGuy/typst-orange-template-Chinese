@@ -13,14 +13,14 @@
   date: datetime.today,
   author: "Goro Akechi",
   main-color: rgb("#F36619"),
-  lang: "en",
+  lang: "zh",
   cover: image("./background.svg"),
   image-index: image("./orange1.jpg"),
   list-of-figure-title: "List of Figures",
   list-of-table-title: "List of Tables",
   supplement-chapter: "Chapter",
   supplement-part: "Part",
-  part-style: 0,
+  part-style: 1,
   copyright: [
     Copyright © 2023 Flavio Barisi
 
@@ -349,19 +349,20 @@ Referencing @figure in-text using its label and referencing @figure1 in-text usi
   caption: [Floating figure.],
 ) <figure1>
 
-#my-bibliography( bibliography("sample.bib"))
+#my-bibliography(bibliography("sample.bib", style:"american-psychological-association"))
 
 #make-index(title: "Index")
 
-#show: appendices.with("Appendices", hide-parent: false)
+#show: appendices.with("附录", hide-parent: true)
 
+#chapter("Appendix A", image: image("./orange2.jpg"))
+
+== appendix A.1
+
+#lorem(50)
 #chapter("Appendix Chapter Title", image: image("./orange2.jpg"))
 
 == Appendix Section Title
 
 #lorem(50)
-#chapter("Appendix Chapter Title", image: image("./orange2.jpg"))
 
-== Appendix Section Title
-
-#lorem(50)
